@@ -1,0 +1,249 @@
+header{
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+}
+.header{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding-left:4%;
+	padding-right:4%;
+	background-color:rgba(242, 249, 249, 0.8);
+	
+	}
+.header p,a{
+	font-size:3vh;
+}
+.view p,.view h1{
+	color: #f2f9f9;
+	font-size:2vw;
+	text-shadow: 2px 0 0 black;
+}
+@media only screen and (max-width: 600px) {
+    .view p,.view h1{
+	color: #f2f9f9;
+	font-size:4vw;
+	text-shadow: 2px 0 0 black;
+}
+}
+#links{
+	width:40vw;
+
+}
+.header p{
+	font-family: Impact, Charcoal, sans-serif;
+	color:#595959;
+	text-shadow: 2px 2px #ff5c33;
+}
+.header a{
+  	color:#666666;
+  	text-shadow: 0.5px 0.5px #ff5c33;
+  	text-align: center;
+  	padding: 12px;
+  	text-decoration: none;
+  	font-size: 18px; 
+  	line-height: 19px;
+  	border-radius: 7px;
+}
+@media only screen and (max-width: 600px) {
+    .header a {
+       color: #666666;
+  	   text-align: center;
+  	   padding: 5px;
+  	   text-decoration: none;
+  	   font-size: 2vh; 
+  	   line-height: 10px;
+  	   border-radius: 7px;
+    }
+}
+
+.header a:hover {
+  background-color:#ff5c33;
+  color:#666666;
+}
+
+@media only screen and (max-width: 600px) {
+    .header p,a {
+       font-size:2vh;
+    }
+}
+#links{
+	width:40vw;
+
+}
+@media only screen and (max-width: 600px) {
+ 	#links{
+    	width: 100vw;
+    
+    }
+}
+#links nav{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.view{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-image:url(images/lambo.jpg);
+    background-position: center;
+    height:70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.part1{
+	margin-top: 5vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-image:url(images/llambo.jpg);
+    background-position: top;
+    height:70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media only screen and (max-width: 600px) {
+	.part1{
+		background-image:url(images/llambo.jpg);
+    	background-position:center;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+		height:40vh;
+	
+}
+}
+
+.line1{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-around;
+	width: 40vw;
+
+}
+@media only screen and (max-width: 600px) {
+	.line1{
+	width: 70vw;
+	display: flex;
+
+}
+}
+
+@media only screen and (max-width: 600px) {
+	.line1 .text h1{
+	font-size: 4vw;
+	padding-left: 10px;
+
+}
+}
+@media only screen and (max-width: 600px) {
+	.line1 .types button{
+	padding-left: 20px;
+	width: 30vw;
+
+}
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	width: 70vw;
+	background-color:rgba(242, 249, 249, 0.5);
+	padding:2vw;
+	
+}
+.find{
+	margin-top: 20px;
+}
+.line2{
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-around;
+	width: 70vw;
+}
+@media only screen and (max-width: 600px) {
+	.line2{
+	display: flex;
+	flex-direction:column;
+	justify-content:flex-start;
+	align-items: flex-start;
+	width: 70vw;
+}
+}
+@media only screen and (max-width: 600px) {
+	#mark p,#model p{
+	font-size: 4vw;
+
+}
+}
+#brands{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width:30vw;
+}
+@media only screen and (max-width: 600px) {
+	#mark,#model {
+		margin-top: 10px;
+
+}
+}
+#mark,#model{
+	display: flex;
+	flex-direction: row;
+	height:4vh;
+	align-items: center;
+	justify-content: center;
+
+}
+#price,#year{
+	display: flex;
+	flex-direction: column;
+	
+}
+@media only screen and (max-width: 600px) {
+	#price,#year{
+	display: flex;
+	flex-direction:row;
+	align-items: center;
+	justify-content: center;
+	
+}
+}
+#block{
+	display: flex;
+	flex-direction: column;
+	
+}
+@media only screen and (max-width: 600px) {
+	#blocks{
+	display: flex;
+	flex-direction:row;
+	height: 8vw;
+	margin-top: 10px;
+}
+}
+input{
+	width: 10vw;
+
+}
+#price #line1{
+	display: flex;
+	flex-direction: row;
+}
+#year #line2{
+	display: flex;
+	flex-direction: row;
+}
