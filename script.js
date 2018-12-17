@@ -92,5 +92,6 @@ document.getElementsByTagName("button")[2].addEventListener('click',checking);
 
 
 
+
 //-------------------------------------------------------
 //Finishing accessing to DataBase

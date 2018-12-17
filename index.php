@@ -9,6 +9,7 @@
 </head>
 <body>
 	<header>
+	    <a href="login.php">Admin page</a>
 		<div class="header">
 			<div id="name">
 				<p>Johny's Garage</p>
