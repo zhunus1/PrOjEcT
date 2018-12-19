@@ -1,21 +1,9 @@
  <html>
- <style>
- 	form{
- 		display: flex;
- 		flex-direction: column;
- 		justify-content: center;
- 		align-items: center;
- 		padding-top: 100px;
- 	}
- 	div{
- 		height: 200px;
- 		margin-top:150px;
- 		border:3px solid orange;
- 	}
-
- 	
-
- </style>
+ <head>
+ 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<link rel="stylesheet" href="login.css">
+ </head>
  	<body>
  		<div>
  		<form action="admin.php" method="post">
@@ -24,6 +12,7 @@
  			<input type="password" name="password" placeholder="Enter your password"><br>
  			<input type="submit" value="Log in">
 		</form>
+			<a href="index.php">Go back!</a>
 		</div>		
 	</body>
  </html>

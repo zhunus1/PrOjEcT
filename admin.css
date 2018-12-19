@@ -7,10 +7,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 form{
 		display: flex;
-		flex-direction: row;
+		flex-direction:column;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		justify-content: center;
@@ -20,7 +21,7 @@ form{
 		
 	}
 	input{
-		height: 20px;
+		height: 25px;
 	}
 	p{
 		font-family: Impact, Charcoal, sans-serif;
@@ -50,4 +51,20 @@ form{
 		align-items: center;
 		justify-content: space-between;
 		width: 220px;
+	}
+	a{
+		background-color: #f44336;
+ 		color: white;
+  		padding: 6px 15px;
+  		text-align: center;
+  		text-decoration: none;
+  		display: inline-block;
+	}
+	input[type="submit"]{
+		background-color: #f44336;
+ 		color: white;
+  		padding: 1px 20px;
+  		text-align: center;
+  		text-decoration: none;
+  		display: inline-block;
 	}

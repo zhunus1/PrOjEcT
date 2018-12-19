@@ -1,0 +1,50 @@
+form{
+ 		display: flex;
+ 		flex-direction: column;
+ 		justify-content: center;
+ 		align-items: center;
+ 		padding-top: 100px;
+ 	}
+ 	div{
+ 		display: flex;
+ 		justify-content: center;
+ 		align-items: center;
+ 		flex-direction: column;
+ 		background-image:url(images/lex.jpg);
+    	background-position: center;
+    	height:100vh;
+    	background-repeat: no-repeat;
+    	background-size: cover; 	
+	}
+	div a{
+		background-color: #f44336;
+ 		color: white;
+  		padding: 14px 25px;
+  		text-align: center;
+  		text-decoration: none;
+  		display: inline-block;
+	}
+	div input[type="submit"]{
+		background-color: #f44336;
+ 		color: white;
+  		padding: 6px 15px;
+  		text-align: center;
+  		text-decoration: none;
+  		display: inline-block;
+	}
+	div input[type="text"],input[type="password"]{
+		border:1px solid #f44336;
+		height: 25px;
+	}
+	form p{
+		font-size: 2.5vw;
+			color: #f2f9f9;
+			text-shadow: 2px 0 0 black;
+	}
+
+	@media only screen and (max-width: 600px) {
+		 form p{
+			font-size: 10vw;
+			
+ 		}	
+	}

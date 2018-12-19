@@ -9,7 +9,7 @@
 </head>
 <body>
 	<header>
-	    <a href="login.php">Admin page</a>
+	    
 		<div class="header">
 			<div id="name">
 				<p>Johny's Garage</p>
@@ -76,14 +76,37 @@
 			</div>
 		</div>
 		</section>
-		<section>
-			<div class="cards">	
+		
+	<section>
+		<div class="cards">
 			
 
+		</div>
 
+	</section>
+
+	<footer>
+		<div class="foot">
+			<div class="opisanie">
+				<p>
+Johny's Garage Company
+Brunnenstrasse 9 
+D-72379 Hechingen	Fon: +49 (0) 7471-960 13-0 
+Fax: +49 (0) 7471-960 13-13 
+Mail: info@autoseredin.de	Auto Seredin Handels GmbH Administration 
+Brunnenstraße 9 
+D-72379 Hechingen</p>
 
 			</div>
-		</section>
-	<footer></footer>
+			<div class="rights">
+				<div id="rtext">
+					<h1>Johny's Garage 2018. </h1>
+					<h2>All rights reserved.</h2>
+					<a href="login.php">Admin page</a>
+				</div>
+			</div>
+		</div>
+		
+	</footer>
 </body>
 </html>
