@@ -7,33 +7,45 @@ function add($make,$mode,$yea,$pric,$ur){
 
 function check(){
 $a=array();
-if(isset($_POST['maker'])){
+if(isset($_POST['maker']) and !empty($_POST['maker'])){
 	array_push($a,$_POST['maker']);
-
+}else{
+	alert("Fill the Make");
 }
-if(isset($_POST['model'])){
+if(isset($_POST['model']) and !empty($_POST['model'])){
 	array_push($a,$_POST['model']);
 
+}else{
+	alert('Fill the Model');
 }
-if(isset($_POST['year'])){
+if(isset($_POST['year']) and !empty($_POST['year'])){
 	array_push($a,$_POST['year']);
 	
+}else{
+	alert('Fill the Year');
 }
-if(isset($_POST['price'])){
+if(isset($_POST['price']) and !empty($_POST['price'])){
 	array_push($a,$_POST['price']);
 	
+}else{
+	alert('Fill the Price');
 }
-if(isset($_POST['url'])){
+if(isset($_POST['url']) and !empty($_POST['url'])){
 	array_push($a,$_POST['url']);
 	
+}else{
+	alert('Fill the URL');
 }
 	return $a;
-
 }
+
+
 $f=check();
 if(sizeof($f)>1){
 add(array_values($f)[0],array_values($f)[1],array_values($f)[2],array_values($f)[3],array_values($f)[4]);}
 ?>
+
+
 		<html>
 <head>
 	<meta charset="UTF-8">
@@ -69,4 +81,4 @@ add(array_values($f)[0],array_values($f)[1],array_values($f)[2],array_values($f)
 </body>
 </html>
 
-		
+	

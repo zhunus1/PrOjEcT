@@ -18,6 +18,7 @@ header{
 .header p,a{
 	font-size:3vh;
 }
+
 .view p,.view h1{
 	color: #f2f9f9;
 	font-size:2vw;
@@ -30,10 +31,7 @@ header{
 	text-shadow: 2px 0 0 black;
 }
 }
-#links{
-	width:40vw;
 
-}
 .header p{
 	font-family: Impact, Charcoal, sans-serif;
 	color:#595959;
@@ -71,23 +69,6 @@ header{
        font-size:2vh;
     }
 }
-#links{
-	width:40vw;
-
-}
-@media only screen and (max-width: 600px) {
- 	#links{
-    	width: 100vw;
-    
-    }
-}
-#links nav{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-}
-
 .view{
 	display: flex;
 	flex-direction: column;
@@ -108,7 +89,7 @@ header{
 	align-items: center;
 	background-image:url(images/llambo.jpg);
     background-position: top;
-    height:70vh;
+    height:35vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -335,3 +316,72 @@ footer,section{
   text-decoration: none;
   display: inline-block;
 }
+
+
+
+.menu * {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.menu {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			position: relative;
+			width:40vw;
+			}
+		@media only screen and (max-width: 600px) {
+ 			.menu{
+    			width: 100vw;
+    
+   			 }
+			}
+		.item_menu {
+			float: left;
+			list-style-type: none;
+			width: 10vw;
+		}
+		.item_menu ul {
+			display: none;
+			list-style-type: none;
+			border: 1px solid grey;
+			position: absolute;
+			z-index: 1;
+			box-shadow: 0px 0px 8px -1px grey; 
+			background-color: white;
+			width: 17vw;
+		}
+		.item_menu:hover ul {
+			display: block;
+		}
+		.item_menu:hover .link {
+			text-decoration: none;
+			color:#000;
+			border-right: 1px solid grey;
+			border-left: 1px solid grey;
+			border-top: 1px solid grey;
+			border-radius: 5px 5px 0px 0px;
+			padding: 5px 5px 2px 5px;
+			background-color: #ff5c33;
+			box-shadow: 1px -1px 2px -1px grey, -1px 0 2px -1px #A4A4A4;
+		}
+		.link {
+			padding: 6px;
+		}
+		.item_menu ul li a {
+			text-decoration: none;
+			padding: 0 20px 0 5px;
+		}
+		.item_menu ul li a:hover {
+			color: white;
+			background-color:#ff5c33;
+			margin: 0px 2px 2px 0px;
+			display: block;
+			width: 15vw;
+		}
+		.item_menu li {
+			width: 15vw;
+		
+		}

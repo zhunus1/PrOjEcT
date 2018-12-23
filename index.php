@@ -6,6 +6,38 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="main.css">
 	<script src="script.js" defer></script>
+	<script>
+function showUser(str) {
+    if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","database.php",true);
+        xmlhttp.send();
+    }
+}
+</script>
+<style>#txtHint{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+}
+                      </style>
 </head>
 <body>
 	<header>
@@ -14,14 +46,40 @@
 			<div id="name">
 				<p>Johny's Garage</p>
 			</div>
-			<div id="links">
-				<nav>
-					<a href="">About us</a>
-					<a href="">Contacts</a>
-					<a href="">Personal</a>
-					<a href="">FeedBack</a>
-				</nav>
-			</div>
+			<div class="menu">
+					<ul>
+						<li class="item_menu"><a class="link" href="#">About Us</a>
+							<ul>
+							<p>Johny's Garage is a web site of the real-world auto saloon which is located in Almaty.</p>		
+
+							</ul>
+						</li>
+					</ul>
+					<ul>
+						<li class="item_menu"><a class="link" href="#">Contacts</a>
+							<ul>
+								<li><p>Jexembiyeva Karina</p><h2>Product Manager</h2><p>87010101342</p></li><br>
+								<li><p>Orazov Arslan</p><h2>PR Manager</h2><p>87771232888</p></li>
+							</ul>
+						</li>
+					</ul>
+					<ul>
+						<li class="item_menu"><a class="link" href="#">Staff</a>
+							<ul>
+								<li><h2>Karimov Zhunus</h2><p>CEO</p></li>
+								<li><h2>Orazov Arslan</h2><p>PR Manager</p></li>
+								<li><h2>Jexembiyeva Karina</h2><p>Product Manager</p></li>
+							</ul>
+						</li>
+					</ul>
+					<a class="link" href="feed.php">FeedBack</a>
+							
+				</div>
+					
+
+
+				
+			
 		</div>
 	</header>
 	<section>
@@ -33,55 +91,36 @@
 		<section>
 			<div class="part1">
 				<div class="container">
-				<div class="line1">
-					<div class="text">
-						<h1>Искать автомобиль по:</h1>
+					<div class="text9">
+						<p>Show all available cars!</p>
 					</div>
-					<div class="types">
-						<button id="par1" value="true" onclick="price()">Цене и году выпуска</button>
-						<button id="par2" value="true" onclick="parametr()">По всем параметрам</button>
-				</div>
-				</div>
-					<div class="line2">
-						<div id="brands">
-							<div id="mark">
-								<p>Выберите марку:</p>
-								<select id="brandy"><option>Choose</option></select>
-							</div>
-							<div id="model">
-								<p>Выберите модель:</p>
-								<select id="modeli"><option>Choose</option></select>
-							</div>
-						</div>
-						<div id="blocks">
-						<div id="price">
-							<p>Цена:</p>
-							<div id="line1">
-								<input type="text" name="price1" placeholder=" от">
-								<input type="text" name="price2" placeholder=" до">
-							</div>
-						</div>
-						<div id="year">
-							<p>Год выпуска:</p>
-							<div id="line2">
-								<input type="text" name="year" placeholder=" от">
-								<input type="text" name="year" placeholder=" до">
-							</div>
-						</div>
-						</div>
-					</div>
-				<div class="find">
-				<button>Искать!</button>
+				<form action="javascript:showUser(this.value)">
+				<input type="submit">
+				</form>
 			</div>
 			</div>
 		</div>
 		</section>
-		
-	<section>
-		<div class="cards">
-			
+		<?php 
+			$maker=array();
+	  		$cost=array();
+	  		$year=array(); 
+	  		$url=array();
+	  		$link= mysqli_connect("localhost","root","");
+	  		mysqli_select_db($link,"garage") or die("No connection!");
+	  		$sql="SELECT Model,Maker,Price,Year,URL from garage";
+	  		$result = mysqli_query($link, $sql);
+	 		while ($row = $result->fetch_assoc()) {
+    	   		array_push($maker,$row['Maker']." ".$row["Model"]);
+    	   		array_push($cost,$row['Price']);
+    	   		array_push($year,$row['Year']);
+    	   		array_push($url,$row['URL']);
+    	   	}
 
-		</div>
+
+		?>
+	<section>
+			<div id="txtHint"></div>
 
 	</section>
 

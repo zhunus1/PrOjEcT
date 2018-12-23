@@ -31,7 +31,7 @@ function f() {
                 q.add(a1);}}}}
 	var c = document.getElementById('brandy');
 	for (let i of brandss){
-    	ad = document.createElement("option");
+    	let ad = document.createElement("option");
     	ad.text = i;
     	c.add(ad);
 	}
@@ -67,31 +67,5 @@ function checking(){
 	}
 }
 
-document.getElementsByTagName("button")[2].addEventListener('click',checking);
+document.getElementsByTagName("form")[0].addEventListener('click',checking);
 //-------------------------------------------------------
-//Finishing getting data from form!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//-------------------------------------------------------
-//Finishing accessing to DataBase
